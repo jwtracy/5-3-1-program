@@ -1,0 +1,33 @@
+[Unit]
+Description=Program Tracker (Next.js)
+After=network.target
+
+[Service]
+Type=simple
+User=apptracker
+Group=apptracker
+WorkingDirectory=/opt/program-tracker
+
+# Runtime config. The SQLite file lives outside the repo, on its own volume path.
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=HOSTNAME=127.0.0.1
+Environment=DATABASE_PATH=/var/lib/program-tracker/app.db
+
+# Runs the Next.js standalone server (shipped as artifacts by deploy/deploy.sh) directly
+# with node, bound to 127.0.0.1:3000. nginx is the only thing that talks to it.
+ExecStart=/usr/bin/node server.js
+
+Restart=always
+RestartSec=3
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+# The app only needs write access to its data directory.
+ReadWritePaths=/var/lib/program-tracker
+
+[Install]
+WantedBy=multi-user.target

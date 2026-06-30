@@ -1,0 +1,10 @@
+{
+  "name": "program-tracker-dbtools",
+  "private": true,
+  "description": "Isolated tooling installed on the VM to run migrations/seed and to source a linux-arm64 better-sqlite3 binary for the app bundle. Versions mirror the app's package.json.",
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "drizzle-orm": "^0.45.2",
+    "tsx": "^4.22.4"
+  }
+}
