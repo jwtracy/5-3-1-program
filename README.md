@@ -38,6 +38,8 @@ across 1mo / 3mo / 6mo / 1yr windows.
 
 ![Progress chart](docs/screenshots/progress.png)
 
+![Theoretical total chart](docs/screenshots/progress-total.png)
+
 ### Settings: training maxes + pause
 Edit each lift's training max, override the program state, and **pause the program** when
 travelling, sick, or injured so logging won't advance the cycle. A 1RM calculator and CSV
