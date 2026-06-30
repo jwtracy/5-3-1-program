@@ -36,9 +36,7 @@ Per lift, your work-set weight (color-coded by the 5s / 3s / 1s week) overlaid w
 estimated 1RM** from each AMRAP set, plus a **theoretical total** (squat + bench + deadlift),
 across 1mo / 3mo / 6mo / 1yr windows.
 
-![Progress chart](docs/screenshots/progress.png)
-
-![Theoretical total chart](docs/screenshots/progress-total.png)
+![Progress charts](docs/screenshots/progress.png)
 
 ### Settings: training maxes + pause
 Edit each lift's training max, override the program state, and **pause the program** when
